@@ -57,7 +57,7 @@ export default function Home() {
     setFinalTeams([sendData.batting_team, sendData.bowling_team]);
 
     try{
-      const prediction = await axios.post('http://localhost:5000/predict', sendData,{
+      const prediction = await axios.post('https://ipl-predictor-c4ld.onrender.com/predict', sendData,{
         headers: {
           "Content-Type": "application/json"
         },}

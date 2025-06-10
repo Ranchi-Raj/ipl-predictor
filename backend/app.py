@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 
 model = joblib.load('ipl_model.pkl')  # Load your pre-trained model
 @app.route('/')
